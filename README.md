@@ -19,6 +19,10 @@ Instructions
 Not much work is done yet, but until then watch this space.
 
 Features (planned)
+------------------
+
 - Basic backups with rsync
 - Compressed backups with tar
 - Ability to create backup whitelists/blacklists for selected dirs
+- The ability to restore saved backups (though people could probably just do
+  this themselves)

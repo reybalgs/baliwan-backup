@@ -33,7 +33,20 @@ class Backup_Session():
     Instantiated for every backup session."""
     def backup_menu(self):
         """A menu showing various backup options"""
-        print('Something')
+        opt = 0
+        while (opt < 1 or opt > 3):
+            print("Please select an option:")
+            print("[1]\tBackup current dir\n[2]\tBackup another dir\n" +
+                    "[3]\tExit")
+            opt = input("Selection: ")
+
+            # Evaluate the input
+            if (opt == 1):
+                print("Backup curr dir selected")
+            elif (opt == 2):
+                print("Backup another dir selected")
+            elif (opt == 3):
+                print("Exit!")
 
     def __init__(self):
         self.home_dir = ''
@@ -54,7 +67,8 @@ def main(argv=None):
         print >>sys.stderr, "use --help for help"
         return 2
 
-    print('Hello world!')
+    session = Backup_Session()
+    session.backup_menu()
 
 if __name__ == "__main__":
     sys.exit(main())
